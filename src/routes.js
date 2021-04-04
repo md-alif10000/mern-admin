@@ -43,6 +43,7 @@ const AddNewProducts = React.lazy(() => import("./views/products/AddNewProducts/
 const Categories = React.lazy(() =>import("./views/categories"));
 const Orders = React.lazy(() =>import("./views/orders/index2"));
 const Recharges = React.lazy(() => import("./views/recharge/index"));
+const Coupons = React.lazy(() => import("./views/coupons/index"));
 
 const AddNewTicket = React.lazy(() => import("./views/tickets/AddNewTicket"));
 
@@ -53,47 +54,51 @@ const ERROR404 = React.lazy(() => import("./views/pages/page404/Page404"));
 
 
 const routes = [
-  { path: "/", exact: true, name: "Home" },
-  { path: "/dashboard", name: "Dashboard", component: Dashboard },
-  { path: "/products", name: "Theme", component: AllProducts, exact: true },
-  { path: "/all-products", name: "All Products", component: AllProducts },
-  {
-    path: "/add-new-product",
-    name: "Add New Products",
-    component: AddNewProducts,
-  },
-  {
-    path: "/categories",
-    name: "Categories",
-    component: Categories,
-  },
-  {
-    path: "/orders",
-    name: "Orders",
-    component: Orders,
-  },
-  {
-    path: "/users",
-    name: "All Users",
-    component: Users,
-  },
-  {
-    path: "/recharges",
-    name: "Recharges",
-    component: Recharges,
-  },
-  {
-    path: "/add-new-ticket",
-    name: "Add New Ticket",
-    component: AddNewTicket,
-  },
+	{ path: "/", exact: true, name: "Home" },
+	{ path: "/dashboard", name: "Dashboard", component: Dashboard },
+	{ path: "/products", name: "Theme", component: AllProducts, exact: true },
+	{ path: "/all-products", name: "All Products", component: AllProducts },
+	{
+		path: "/add-new-product",
+		name: "Add New Products",
+		component: AddNewProducts,
+	},
+	{
+		path: "/categories",
+		name: "Categories",
+		component: Categories,
+	},
+	{
+		path: "/orders",
+		name: "Orders",
+		component: Orders,
+	},
+	{
+		path: "/users",
+		name: "All Users",
+		component: Users,
+	},
+	{
+		path: "/recharges",
+		name: "Recharges",
+		component: Recharges,
+	},
+	{
+		path: "/add-new-ticket",
+		name: "Add New Ticket",
+		component: AddNewTicket,
+	},
+	{
+		path: "/coupons",
+		name: "Coupons",
+		component: Coupons,
+	},
 
-  
-  {
-    path: "/:",
-    name: "All Users",
-    component: ERROR404,
-  },
+	{
+		path: "/:",
+		name: "All Users",
+		component: ERROR404,
+	},
 ];
 
 export default routes;
